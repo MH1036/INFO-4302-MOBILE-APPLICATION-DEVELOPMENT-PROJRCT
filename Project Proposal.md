@@ -6,10 +6,10 @@
 The purpose of this proposal is to provide a report for our project base on our plan and our activity in developing. The project is about a mobile application that can help IIUM security’s officers to identify the students and the staff by using the camera in the mobile and match it with their data in the database. The application can help also in preventing outsiders and fake students.  
  	 
 ### 1.2 PROBLEM DESCRIPTION 
-1.2.1 Background of the problem 
+**1.2.1 Background of the problem** 
 Most of hardship of the security guards when they need to check every person entering the university by checking their matric card and for the outsiders they need to resent an id to enter the university. Most of the time when it is crowded, the guards will not check all the intruders since they are a lot and no time to go through all the matric cards.   
  
-1.2.2 Problem Statement   
+**1.2.2 Problem Statement**   
 As far as we concern there is no mobile application that provides the user with such features as the system proposed. So, this might be the first system can give the officer a help in recognizing who is real student and who is not a student in lesser time and more efficient than manually checking. Plus, it can help those who forgot or lost their matric cards to enter the university without having any problem. 	 
  
 ### 1.3 PROJECT OBJECTIVE 
@@ -21,12 +21,14 @@ As far as we concern there is no mobile application that provides the user with 
  
 ### 1.4 PROJECT SCOPE 
  
-1.4.1 Scope 
-Describe the scope of the application that will be developed.  
-1.4.2 Targeted User 
+**1.4.1 Scope**
+The application that will be developed for IIUM community where the scope will be
+local and for a testing purpose the data will contain 5 records as a student to test
+and one user (security Gard)
+**1.4.2 Targeted User**
 Our targeted user divided to two main category users will use the app as admin in this project they will by IIUM security officer and security guards. On the other hand, users who will be scanned to find their information in our database. Student, staff and outsider where those who filed to identified as student or staff, they will be registered as visitor’s.
  
-1.4.3 Specific Platform 
+**1.4.3 Specific Platform** 
 To build this project we are trying to apply all the knowledge we gain in our class by using react native framework for writing the mobile application codes for iOS and android also using the APIs platform to access the phone camera and other features. The software is needed to develop the app are android studio to use the in-building function and simulate the app on android studio emulator, visual studio code to write our code and tested, Node.js, JDK 1.8 and react native documentation to build a cross-platform app and re-use the codes that will help us. 
 The application will be tested and used on a real mobile phone as hardware is required. This is a demo version where we will create our own database but, in the future, there is a specific requirement where the application need to access IIUM database   
 ### 1.5 CONSTRAINTS 
