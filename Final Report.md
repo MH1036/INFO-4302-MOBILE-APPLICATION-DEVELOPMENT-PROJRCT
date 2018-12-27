@@ -93,3 +93,7 @@ Form page to register the visitor
 
 ![alt text](https://github.com/MH1036/INFO-4302-MOBILE-APPLICATION-DEVELOPMENT-PROJRCT/tree/master/screenshots/3.jpeg)
 Camera to detect the student's face
+
+![alt text](https://github.com/MH1036/INFO-4302-MOBILE-APPLICATION-DEVELOPMENT-PROJRCT/tree/master/screenshots/4.jpeg)
+![alt text](https://github.com/MH1036/INFO-4302-MOBILE-APPLICATION-DEVELOPMENT-PROJRCT/tree/master/screenshots/5.jpeg)
+Shows the inserting, and the data after being stored in the database
