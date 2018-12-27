@@ -6,9 +6,12 @@
 **ADMIN**
 
 ## Group Members
-**MOHAMED MAHMUD MOHAMED HUSSEIN 			1317273**
-**ABOULJID YOUNES 						1817463**
-**WIDYAN KAMILI 							1327833**
+**MOHAMED MAHMUD MOHAMED HUSSEIN 			1317273,**
+
+**ABOULJID YOUNES 						1817463,**
+
+**WIDYAN KAMILI 							1327833,**
+
 **AHMAD HAIDAR ABDULLAH ALATAS 			1322349**
 
 ## LECTURER:
@@ -82,3 +85,11 @@ In case the face recognition did not work, the officer has another method to che
 
 
 ### 2.3 Output Screenshots
+![alt text](https://github.com/MH1036/INFO-4302-MOBILE-APPLICATION-DEVELOPMENT-PROJRCT/tree/master/screenshots/1.jpeg)
+Main Page of the application
+
+![alt text](https://github.com/MH1036/INFO-4302-MOBILE-APPLICATION-DEVELOPMENT-PROJRCT/tree/master/screenshots/2.jpeg)
+Form page to register the visitor
+
+![alt text](https://github.com/MH1036/INFO-4302-MOBILE-APPLICATION-DEVELOPMENT-PROJRCT/tree/master/screenshots/3.jpeg)
+Camera to detect the student's face
