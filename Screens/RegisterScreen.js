@@ -4,41 +4,53 @@ import { StyleSheet,
   View,
   TextInput,
   TouchableOpacity,
-  Image, 
+  Alert, 
   AppRegistry
 } from 'react-native';
+import Api_db from "../Api_db";
+import * as firebase from "firebase"
 
-import firebase from "firebase"
-require("firebase/firestore");
 
-// Initialize Firebase
-var config = {
-  apiKey: "AIzaSyDUXtiC_R0FzR744G3qyOo12Tbj0FDzInQ",
-  authDomain: "security-3c08a.firebaseapp.com",
-  databaseURL: "https://security-3c08a.firebaseio.com",
-  projectId: "security-3c08a",
-  storageBucket: "security-3c08a.appspot.com",
-  messagingSenderId: "110890495327"
-};
-firebase.initializeApp(config);
 
-var db = firebase.firestore();
+firebase.initializeApp(Api_db.FirebaseConfig);
+var database = firebase.database();
 
-export default class Regform extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+export default class RegisterScreen extends React.Component {
+    static navigationOptions = {
+        title: 'Register Page     '
+      };
+  constructor() {
+    super();
 
     this.state = {
-      DOB: "",
+      //DOB: "",
       Vname: '',
       Vid: '',
       Vmobile: '',
       Vreason: '',
-      Vtime: '',
+      //Vtime: '',
+      matricNo: 0
     }
-
-
   }
+  /* pushToFirebase() {
+    let formValues = this.refs.getValues()
+    this.itemsRef.push(formValues)
+  } */
+  writeUserData(){
+    if (this.state.DOB == "" || this.state.Vname == "" || this.state.Vid == "" || this.state.Vmobile == "" || this.state.Vreason == "" || 
+    this.state.Vtime == "") {
+      alert("Please Fill in All the Fields");
+    }
+    else{
+    database.ref('Users/').push({
+        id: this.state.Vid,
+        name: this.state.Vname,
+        mobile: this.state.Vmobile,
+        reason: this.state.Vreason
+    })
+    Alert.alert("SUCCESS! Your User has been Added!!");
+}
+}
 
   submit = async () => {
 
@@ -47,33 +59,41 @@ export default class Regform extends React.Component {
       alert("Please Fill in All the Fields");
     }
   }
-
+  sendMatricNo (){
+    database.ref('Users/').orderByChild('id').equalTo(this.state.matricNo).on("value", function(snapshot) {
+        console.log(snapshot.val());
+        snapshot.forEach(function(data) {
+            console.log(data.key);
+            Alert.alert("Visitor Registred");
+        });
+    });
+    
+  }
   render() {
     return (
       <View style={styles.container}>
       <View style={styles.regform}>
       <Text style={styles.header}>Visitor Registration System</Text>
 
-      <TextInput style={styles.textinput} placeholder="Visitor name" placeholderTextColor='#fff68f'
-       underlineColorAndroid={'transparent'}/>
+      <TextInput style={styles.textinput} placeholder="Visitor name" placeholderTextColor='#fff68f' onChangeText={(Vname) => this.setState({Vname})} value={this.state.Vname} />
 
-      <TextInput style={styles.textinput} placeholder="Visitor ID" placeholderTextColor='#fff68f'
-       underlineColorAndroid={'transparent'}/>
+      <TextInput style={styles.textinput} placeholder="Visitor ID" placeholderTextColor='#fff68f' onChangeText={(Vid) => this.setState({Vid})} value={this.state.Vid} />
 
-      <TextInput style={styles.textinput} placeholder="Visitor Phone No" placeholderTextColor='#fff68f'
-       underlineColorAndroid={'transparent'}/>
+      <TextInput style={styles.textinput} placeholder="Visitor Phone No" placeholderTextColor='#fff68f' onChangeText={(Vmobile) => this.setState({Vmobile})} value={this.state.Vmobile} />
 
-      <TextInput style={styles.textinput} placeholder="Reasons for visiting" placeholderTextColor='#fff68f'
-       underlineColorAndroid={'transparent'}/>
+      <TextInput style={styles.textinput} placeholder="Reasons for visiting" placeholderTextColor='#fff68f' onChangeText={(Vreason) => this.setState({Vreason})} value={this.state.Vreason} />
 
-      <TextInput style={styles.textinput} placeholder="Visiting time" placeholderTextColor='#fff68f'
-       underlineColorAndroid={'transparent'}/>
 
-      <TouchableOpacity style={styles.button}>
-      <Text style={styles.btntext}>Registr a vistor</Text>
+      <TouchableOpacity style={styles.button} /* onPress={()=> this.submit()} */ onPress={() =>this.writeUserData()}  >
+      <Text style={styles.btntext}>Registr a vistor            </Text>
       
       </TouchableOpacity>
+      
+      <TouchableOpacity style={styles.button}   >
+      <TextInput style={{backgroundColor: '#1ec1f4'}}  placeholder='Visitor ID....' onChangeText={(matricNo) => this.setState({matricNo})} onSubmitEditing={()=> this.sendMatricNo()} />
 
+      
+      </TouchableOpacity>
 
       </View>
       </View>
