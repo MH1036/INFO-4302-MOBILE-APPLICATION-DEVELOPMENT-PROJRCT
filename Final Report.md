@@ -83,9 +83,14 @@ Form page to register the visitor
 Camera to detect the student's face
 
 ![alt text](https://github.com/MH1036/INFO-4302-MOBILE-APPLICATION-DEVELOPMENT-PROJRCT/tree/master/screenshots/4.jpeg)
+![alt text](https://github.com/MH1036/INFO-4302-MOBILE-APPLICATION-DEVELOPMENT-PROJRCT/tree/master/screenshots/6.jpeg)
 ![alt text](https://github.com/MH1036/INFO-4302-MOBILE-APPLICATION-DEVELOPMENT-PROJRCT/tree/master/screenshots/5.jpeg)
-Shows the inserting, and the data after being stored in the database
+Shows the regestration process in the form, and the inserted data in the database
+
+![alt text](https://github.com/MH1036/INFO-4302-MOBILE-APPLICATION-DEVELOPMENT-PROJRCT/tree/master/screenshots/7.jpeg)
+When the amin put the id nu,ber in the text field, the function will check either this Id is registered or not and will show this outpot
+
 
 ## 2.4 Conclusion 
 
-
+Security application will be so useful for IIUM community, to maintain the security in high level and decrease the traffic that could be happen because of the checking process. Also, it could be used for other organization since it is easier and faster to detect who is student and who is not. 
