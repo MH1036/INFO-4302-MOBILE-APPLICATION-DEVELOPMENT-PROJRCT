@@ -69,10 +69,8 @@ In case the face recognition did not work, the officer has another method to che
 -	Retrieve the data from database
 -	Router, to connect the pages. 
 
-### 2.2 Functions Screenshots
 
-
-### 2.3 Output Screenshots
+### 2.2 Output Screenshots
 ![alt text](https://github.com/MH1036/INFO-4302-MOBILE-APPLICATION-DEVELOPMENT-PROJRCT/tree/master/screenshots/1.jpeg)
 Main Page of the application
 
@@ -91,6 +89,6 @@ Shows the regestration process in the form, and the inserted data in the databas
 When the amin put the id nu,ber in the text field, the function will check either this Id is registered or not and will show this outpot
 
 
-## 2.4 Conclusion 
+## 2.3 Conclusion 
 
 Security application will be so useful for IIUM community, to maintain the security in high level and decrease the traffic that could be happen because of the checking process. Also, it could be used for other organization since it is easier and faster to detect who is student and who is not. 
